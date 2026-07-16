@@ -42,10 +42,23 @@ Temporary Word files, page renders, and probes belong in the active `_work/<run_
 4. Revise methods/results claim strength without changing equations, variables, samples, estimates, tables, or citations unless evidence explicitly supports the change.
 5. Perform native-level English editing while maintaining content equivalence with the Chinese companion.
 6. Append changes to one `revision_ledger.md`; do not create numbered round manuscripts.
-7. Use `chinese-word-pro` for touched-feature QA, then run one full submission audit.
-8. Replace canonical journal manuscripts only after Zotero, bilingual, figure, formula, table, and root-cleanliness gates pass.
+7. Use `chinese-word-pro` for touched-feature QA. Run one full submission audit only when the user requests a submission-ready delivery or the task changes multiple protected surfaces.
+8. Replace canonical journal manuscripts after the gates appropriate to the declared task class pass; full Zotero, bilingual, figure, formula, table, and root-cleanliness gates remain mandatory for submission delivery.
 
 Read `references/incremental-word-adaptation.md` for Word-only handling and cache invalidation.
+
+## Micro-Edit Fast Lane
+
+When the target journal and canonical manuscript are already known and the request changes only a few known text runs, citation links, captions, cells, or one object:
+
+- patch only the affected language files in one temporary work pair;
+- run only the matching pre/post gate;
+- stop and report the blocker if the narrow repair exceeds five minutes or two failed attempts; never continue with unapproved broad diagnostics;
+- do not rebuild the submission package, refresh the journal profile, rerun corpus analysis, render the whole manuscript, or reopen completed adaptation stages;
+- do not rerun formula, figure, table, or root audits for citation-only or text-only work;
+- stop after the narrow gate passes, replace the canonical file, update the revision ledger briefly, and commit.
+
+If the narrow repair changes unrelated media, fields, pagination, or structures, stop and disclose the escalation trigger before expanding scope.
 
 ## Preservation Priorities
 
