@@ -1,0 +1,4 @@
+interface:
+  display_name: "Journal Adapt"
+  short_description: "Adapt a frozen manuscript to a locked journal"
+  default_prompt: "Use $journal-adapt to adapt my frozen submission mother to the locked target journal while preserving evidence, Zotero fields, and bilingual consistency."
