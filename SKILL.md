@@ -52,6 +52,7 @@ Read `references/incremental-word-adaptation.md` for Word-only handling and cach
 When the target journal and canonical manuscript are already known and the request changes only a few known text runs, citation links, captions, cells, or one object:
 
 - patch only the affected language files in one temporary work pair;
+- when WPS/Zotero interaction is required, use the direct-open and single-refresh route in `references/incremental-word-adaptation.md`; do not browse through WPS's custom file-selection dialog;
 - run only the matching pre/post gate;
 - stop and report the blocker if the narrow repair exceeds five minutes or two failed attempts; never continue with unapproved broad diagnostics;
 - do not rebuild the submission package, refresh the journal profile, rerun corpus analysis, render the whole manuscript, or reopen completed adaptation stages;
