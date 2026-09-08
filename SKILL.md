@@ -1,15 +1,15 @@
 ---
 name: journal-adapt
-description: "Adapt a frozen academic submission mother to one locked target journal using verified journal profiles and corpus-derived writing signals, with Word-only incremental revision, bilingual equivalence, Zotero-field preservation, cached style analysis, isolated journal versions, submission packaging, and final audits. Use after journal-selection-pro has locked a destination."
+description: "Adapt the existing single active manuscript to a selected journal in place, preserving live citations and using scoped Word QA. Separate journal branches and upload exports are opt-in."
 ---
 
 # Journal Adapt
 
-Adapt one frozen submission mother to one locked destination. This skill does not select journals and does not modify empirical facts.
+Adapt the existing active manuscript to one selected destination. Preserve empirical facts and use Git for the pre-adaptation baseline.
 
 ## Single active target and on-demand packaging
 
-English-only is the default. Before a journal is selected, do not run this skill or create a journal/submission directory. On requested adaptation, derive one working manuscript from the mother, then edit only that target; the mother and all other manuscripts remain read-only. Translation and multiple active files require an explicit user request.
+English-only is the default. Before a journal is selected, do not create a journal/submission directory. Adapt the SAME active manuscript at its existing path, promoting a checked temporary candidate back to that path. Do not derive a journal working copy. The main file can itself be anonymous; preserve live citations and supply identifying author details separately when required. Translation and separate journal branches require an explicit request.
 
 Create `submission/` and its required documents only when the user explicitly asks to prepare the upload package. Adaptation, revision, citation refresh or ordinary manuscript delivery alone never implies anonymous-copy generation or package synchronization. Upload files are generated outputs, not maintained companion manuscripts. Create only needed directories, never the entire layout below in advance. These rules take precedence over legacy bilingual/pair and package instructions in references.
 
@@ -18,11 +18,11 @@ Create `submission/` and its required documents only when the user explicitly as
 Require:
 
 - `submission_strategy/journal_decision.json` with `status: locked`.
-- A frozen Chinese/English submission mother or an explicitly English-only mother.
+- One identified active manuscript, English by default; Git preserves its pre-adaptation baseline.
 - A verified journal profile with official-guide retrieval dates.
-- A clean target slug not shared with another journal version.
+- A selected target journal, without requiring a new manuscript directory.
 
-Run `scripts/init_journal_version.py` once. It copies the mother into an isolated journal directory and records source hashes. Never edit or overwrite the mother.
+If target registration is needed, `scripts/init_journal_version.py --project-dir PROJECT --decision DECISION --mother-en ACTIVE.docx` records the existing active path under `workflow/` without copying the manuscript. Only pass `--derive` when the user explicitly requests an isolated branch. The directory layout below applies ONLY to that opt-in legacy mode.
 
 ## Canonical Journal Directory
 

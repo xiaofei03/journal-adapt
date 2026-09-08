@@ -1,6 +1,6 @@
 # Submission handoff
 
-- Resolve one editable journal source and the requested derivatives. If a derivative was manually edited, compare before regeneration; do not discard the user's changes. Reuse a render for byte-identical aliases.
+- Resolve the existing single active manuscript; adapt it at the same path. It can itself be anonymous. Generate a separate static upload file only when unlinking/conversion is needed, and generate required attachments on request. Never maintain a working/anonymous pair by default. If an existing export was manually edited, compare before regeneration; do not discard the user's changes.
 - A ready label must reference the actual file hash. Changed bytes make a previous audit stale; they do not establish a defect. Do not synchronize a frozen submitted package automatically.
 - Prepare all required file roles before the final layout pass: anonymous main, supplementary appendix, identifying title page, funding/acknowledgments, COI, data/AI declarations and any cover letter. Use the portal's current requirements; do not generalize a past journal's page limits or file types.
 - Place contribution-critical results in the main manuscript when needed to support its claims. Compress peripheral control coefficients only if exact results remain traceable. Prose explains interpretation; notes report specification details and uncertainty. Avoid duplicating both.
