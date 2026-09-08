@@ -14,7 +14,7 @@ For a stale citekey, stale Zotero item URI, or a few missing bibliography source
 
 1. Record citation-field and bibliography-field counts in the affected canonical files.
 2. Patch only the target field ranges in temporary copies.
-3. Refresh through Zotero/Word only when required.
+3. For supported IEEE fields, use `zotero-word-fast-refresh` first. Use Zotero/Word integration for unsupported structures or styles.
 4. Verify target current item URI or citekey present, stale identifier absent, field counts valid, one live bibliography retained, and no field-external citekey.
 5. Replace the affected canonical manuscripts and stop.
 
@@ -22,7 +22,7 @@ Do not render the manuscript, hash every image, rebuild the submission package, 
 
 ## Fast WPS Open and Zotero Refresh
 
-Use this route whenever a Word-only journal manuscript must be opened in WPS for Zotero refresh or final inspection.
+Use this fallback when the supported backend route cannot handle the document, or when application rendering/inspection is needed.
 
 ### Open the exact work copy directly
 
@@ -41,7 +41,7 @@ Do not open the WPS home-page or custom file-selection dialog and then browse or
 4. Run a field-aware audit before promotion. At minimum verify unchanged-or-expected item-field count, exactly one live bibliography field, balanced field markers, parseable citation JSON, expected unique cited-item count, matching bibliography-entry count, no missing or uncited entries, and no citekeys outside fields.
 5. Promote the refreshed work copy to the canonical journal manuscript only after those checks pass.
 
-A script may automate direct opening, waiting, saving, or audit steps when it can verify the exact target path and active window. It must not bypass the live Zotero/WPS refresh merely by rewriting visible citation text or bibliography XML. If refresh reduces fields, creates parse errors, leaves the bibliography stale, or rewrites unrelated protected content, reject the refreshed copy and restore from the last healthy work copy.
+A script may automate direct opening, waiting, saving, or audit steps when it can verify the exact target path and active window. The tested IEEE backend may update live field payloads and results using Zotero metadata and bibliography output; changing plain visible numbers alone is not an equivalent refresh. This backend is not a general replacement for official Zotero integration across styles. If either route unexpectedly reduces fields, creates parse errors, leaves the bibliography stale, or rewrites unrelated protected content, reject the candidate and restore from the last healthy work copy.
 
 ## Cache Keys
 

@@ -1,0 +1,11 @@
+# Submission handoff
+
+- Resolve one editable journal source and the requested derivatives. If a derivative was manually edited, compare before regeneration; do not discard the user's changes. Reuse a render for byte-identical aliases.
+- A ready label must reference the actual file hash. Changed bytes make a previous audit stale; they do not establish a defect. Do not synchronize a frozen submitted package automatically.
+- Prepare all required file roles before the final layout pass: anonymous main, supplementary appendix, identifying title page, funding/acknowledgments, COI, data/AI declarations and any cover letter. Use the portal's current requirements; do not generalize a past journal's page limits or file types.
+- Place contribution-critical results in the main manuscript when needed to support its claims. Compress peripheral control coefficients only if exact results remain traceable. Prose explains interpretation; notes report specification details and uncertainty. Avoid duplicating both.
+- For blank space, check forced breaks, section breaks, keep-next chains, non-splitting rows and exact row heights before shrinking fonts. Inspect native equations after export; retain separate checks for formula meaning and renderer fidelity.
+- Record total physical pages, pre-References physical pages, printed page numbers and renderer. Validate first-page abstract/MRS placement and actual conversion output when required; a filename or printed last page is not a page-count measurement.
+- A standalone appendix needs a manuscript identifier/title and an unambiguous reference scheme. Either document correspondence to the main list or provide a separate list if required; never renumber independently by accident. Check table/figure prose callouts.
+- Scrub anonymous file identities after the final save, preserving necessary document structure. Linked masters retain live citations; static upload copies follow the user's and journal's requirements.
+- Once the user reports submission, record the event without inventing a receipt, manuscript ID or uploaded hashes. Preserve identified submitted artifacts and start any later revision separately. Do not reopen optional typographic preferences without a new request.

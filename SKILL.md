@@ -54,12 +54,15 @@ When the target journal and canonical manuscript are already known and the reque
 - patch only the affected language files in one temporary work pair;
 - when WPS/Zotero interaction is required, use the direct-open and single-refresh route in `references/incremental-word-adaptation.md`; do not browse through WPS's custom file-selection dialog;
 - run only the matching pre/post gate;
-- stop and report the blocker if the narrow repair exceeds five minutes or two failed attempts; never continue with unapproved broad diagnostics;
-- do not rebuild the submission package, refresh the journal profile, rerun corpus analysis, render the whole manuscript, or reopen completed adaptation stages;
+- aim for five minutes for a prepared micro edit; after two failures change the approach and explain the concrete issue, continuing safe authorized work;
+- rebuild affected submission derivatives only when synchronization/delivery is requested; otherwise mark dependent outputs stale, including appendix citations affected by renumbering;
+- reuse journal profiles, corpus analysis and unchanged page renders; do not reopen completed stages without a changed dependency;
 - do not rerun formula, figure, table, or root audits for citation-only or text-only work;
 - stop after the narrow gate passes, replace the canonical file, update the revision ledger briefly, and commit.
 
 If the narrow repair changes unrelated media, fields, pagination, or structures, stop and disclose the escalation trigger before expanding scope.
+
+For final submission, read `references/submission-handoff.md` for file roles, page-count evidence and post-submission freezing.
 
 ## Preservation Priorities
 
