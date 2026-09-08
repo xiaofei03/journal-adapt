@@ -7,6 +7,12 @@ description: "Adapt a frozen academic submission mother to one locked target jou
 
 Adapt one frozen submission mother to one locked destination. This skill does not select journals and does not modify empirical facts.
 
+## Single active target and on-demand packaging
+
+English-only is the default. Before a journal is selected, do not run this skill or create a journal/submission directory. On requested adaptation, derive one working manuscript from the mother, then edit only that target; the mother and all other manuscripts remain read-only. Translation and multiple active files require an explicit user request.
+
+Create `submission/` and its required documents only when the user explicitly asks to prepare the upload package. Adaptation, revision, citation refresh or ordinary manuscript delivery alone never implies anonymous-copy generation or package synchronization. Upload files are generated outputs, not maintained companion manuscripts. Create only needed directories, never the entire layout below in advance. These rules take precedence over legacy bilingual/pair and package instructions in references.
+
 ## Entry Gate
 
 Require:

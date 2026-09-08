@@ -44,7 +44,7 @@ def main() -> None:
     if state_path.exists():
         print(state_path)
         return
-    for rel in ("profile", "manuscript/cn", "manuscript/en", "figures", "audits", "submission"):
+    for rel in ("manuscript/en",):
         (base / rel).mkdir(parents=True, exist_ok=True)
     sources = {}
     if args.mother_cn:
@@ -59,7 +59,9 @@ def main() -> None:
     state = {
         "schema_version": 1, "journal": decision["target_journal"],
         "created_at": datetime.now(timezone.utc).isoformat(), "status": "initialized",
-        "sources": sources, "gates": {"zotero": "pending", "bilingual": "pending", "figures": "pending", "formulas": "pending", "tables": "pending", "submission": "pending"},
+        "sources": sources, "active_manuscript": str(target),
+        "auto_generate_submission": False,
+        "gates": {"zotero": "pending", "bilingual": "pending" if args.mother_cn else "not_applicable", "figures": "pending", "formulas": "pending", "tables": "pending", "submission": "not_requested"},
     }
     state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (base / "revision_ledger.md").write_text(f"# Revision Ledger: {decision['target_journal']['journal']}\n\n", encoding="utf-8")
